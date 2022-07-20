@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+
+<body>
+  <div id='fruits-container'>
+    <div class='fruit' id="fruit-1" pys-onClick="show_fruit">🍪</div>
+    <div class='fruit' id="fruit-2">🍪</div>
+    <div class='fruit' id="fruit-3">🍪</div>
+  </div>
+ 
+    <h2 id='exercise'>Exercise: Try turning the cookie into a strawberry! Hint: The left most cookie has an id of <code>fruit-1</code>. Use <code>replaceFruit(div_id, yourFruit)</code></h2>
+  <py-button text='hello' title='hello'>Hello</py-button>
+    <div id='py-repl'>
+      <py-repl>
+        def replaceAllFruits(div_ids, fruits):
+          for id, fruit in zip(div_ids, fruits):
+            print(f'div id: {id} fruit: {fruit}')
+      </py-repl>
+    </div>
+    <py-script src='script.py'/>
+  
+
+<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>

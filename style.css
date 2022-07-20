@@ -1,0 +1,47 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  
+}
+
+#exercise {
+  font-size: 17px;
+  margin: auto;
+  word-break: break-all;
+}
+
+#fruits-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+
+
+.fruit {
+  margin: auto;
+  font-size: 80px;
+  width: 100px;
+  height: 100px;
+  -webkit-animation: spin 80s infinite linear;
+}
+
+@-webkit-keyframes spin {
+	0%  {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}	
+}
+
+
+#py-repl {
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+/* When the browser is at least 800px and above */
+@media screen and (min-width: 1024px) {
+  #py-repl {
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+  }
+}
