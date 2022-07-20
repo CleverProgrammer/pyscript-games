@@ -1,5 +1,5 @@
 # from datetime import datetime
-# from playsound import playsound
+from playsound import playsound
 
 # now = datetime.now()
 # now.strftime("%m/%d/%Y, %H:%M:%S")
@@ -7,11 +7,12 @@
 # print([number * 2 for number in numbers])
 # print([number for number in numbers if number % 2 != 0])
 
-# def replaceFruit(div_id, item):
+def replaceFruit(div_id, item):
   
-#   pyscript.write(div_id, item)
-#   print('✅ success, dom manipulated! 💪')
-#   console.log('✅ success, dom manipulated! 💪')
+  pyscript.write(div_id, item)
+  print('✅ success, dom manipulated! 💪')
+  playsound('ding.mp3')
+  console.log('✅ success, dom manipulated! 💪')
 
 # replaceAllFruits(['fruit-1', 'fruit-2', 'fruit-3'], ['🍓', '🍌', '🍊'])
 def replaceAllFruits(div_ids, fruits):
@@ -26,8 +27,7 @@ def show_fruit(*args, **kwargs):
   print(args[0])
   print('-----------')
   pyscript.write('fruit-1', '🍓')
-
-# playsound('ding.mp3')
+  playsound('ding.mp3')
 
 # from random import choice
 
