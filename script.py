@@ -1,25 +1,24 @@
-def replaceFruit(div_id, item):
+from random import choice
+
+async def replaceFruit(div_id, fruit):
   
-  pyscript.write(div_id, item)
+  pyscript.write(div_id, fruit)
   print('✅ success, dom manipulated! 💪')
   # playsound('ding.mp3')
   console.log('✅ success, dom manipulated! 💪')
-
-# replaceAllFruits(['fruit-1', 'fruit-2', 'fruit-3'], ['🍓', '🍌', '🍊'])
   
-def replaceAllFruits(div_ids, fruits):
-  for id, fruit in zip(div_ids, fruits):
-    print(f'div id: {id} fruit: {fruit}')
-  # pyscript.write()
+def replaceAllFruits():
+  for fruit in document.querySelectorAll('.fruit'):
+    pyscript.write(fruit.id, choice('🍓 🫐 🍊 🍑 🍌 🥝'.split()))
 
-def show_fruit(*args, **kwargs):
-  print('hi')
-  print('-----------')
-  print(dir(args))
-  print(args[0])
-  print('-----------')
-  pyscript.write('fruit-1', '🍓')
-  playsound('ding.mp3')
+def on_click_change_fruit_1(event):
+  pyscript.write('fruit-1', choice('🍓 🫐 🍊 🍑 🍌 🥝'.split()))
+
+def on_click_change_fruit_2(event):
+  pyscript.write('fruit-2', choice('🍓 🫐 🍊 🍑 🍌 🥝'.split()))
+
+def on_click_change_fruit_3(event):
+  pyscript.write('fruit-3', choice('🍓 🫐 🍊 🍑 🍌 🥝'.split()))
 
 # from random import choice
 

@@ -10,78 +10,7 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-  <style>
-   body {
-        background-color: #222;
-      }
-      .container {
-      display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-auto-rows: minmax(200px, auto);
-/*         width: 70vw;
-        max-width: 1270px; */
-/*         display: flex;
-        flex-direction: column; */
-        grid-gap: 1em;
-        margin-top: 1em;
-      }
-
-      .container > div:first-child {
-        grid-row: 1/3;
-      }
-
-      .container > div {
-        background-color: #444;
-        box-shadow: 0px 5px 10px #000;
-        padding: 10px;
-      }
-
-      h2,
-      b {
-        color: #eee;
-      }
-
-      .cm-gutters,
-      .cm-gutter,
-      .cm-gutterElement {
-        color: #777 !important;
-        background-color: #222 !important;
-      }
-
-      .editor-box {
-        border: none !important;
-      }
-
-      .cm-line {
-        color: #fff !important;
-        background-color: #444 !important;
-      }
-
-      .ͼa {
-        color: #eca254 !important;
-      }
-
-      .ͼf {
-        color: #e7c378 !important;
-      }
-
-      .ͼc {
-        color: #d4bfff !important;
-      }
-
-      .ͼd {
-        color: #bae67e !important;
-      }
-
-      .cm-activeLine {
-        color: #fff !important;
-        background-color: #555 !important;
-      }
-
-      #errors {
-        color: white;
-      }
-  </style>
+  
   
 </head>
 
@@ -89,22 +18,24 @@
   <script src='script.py'></script>
 <div class="container">
     <div>
-      <py-repl std-out="output" std-err="errors"></py-repl>
+      <py-repl auto-generate=true std-out="output" std-err="errors">
+      </py-repl>
     </div>
     <div>
       <b>Output</b><hr>
       <div id="output">
         <div id='fruits-container'>
-            <div class='fruit' id="fruit-1" pys-onClick="show_fruit">🍪</div>
-            <div class='fruit' id="fruit-2">🍪</div>
-            <div class='fruit' id="fruit-3">🍪</div>
+            <div class='fruit' id="fruit-1" pys-onClick="on_click_change_fruit_1">🍪</div>
+            <div class='fruit' id="fruit-2" pys-onClick="on_click_change_fruit_2">🍪</div>
+            <div class='fruit' id="fruit-3" pys-onClick="on_click_change_fruit_3">🍪</div>
           </div>
 
-            <h2 id='exercise'>Exercise: Try turning the cookie into a strawberry! 
+            <h2 class='exercise'>Exercise: Try turning the cookie into a strawberry! 
               Hint: The left most cookie has an id of 
               <code>fruit-1</code>. Use 
-              <code>replaceFruit(div_id, yourFruit)</code>
+              <code>pyscript.write(div_id, yourFruit)</code>
             </h2>
+          <h2 class='exercise'>Exercise #2: Your Name Goes Here (Hint: the div id is `my-name`) 👉 <span id='my-name'></span></h2>
       </div>
     </div>
     <div>
@@ -112,12 +43,7 @@
       <div id="errors"></div>
     </div>
   </div>
-  
-<!--   <script src='playground.js'></script> -->
-<!--   <py-inputbox>
-def on_keypress(event):
-    print(event)
-</py-inputbox> -->
+
   <py-script src='script.py'/>
 </body>
 
